@@ -16,7 +16,7 @@ _MessagesToAnnounceStringArray =
 
 [ 
 ["Looking for an admin? Contact us on teamspeak - ts.pipehitters.us", 600],
-["Spawn with the gear YOU WANT EVERYTIME ! Enquire about our supporter options on Teamspeak", 1500], 
+["If you like the server then donate a beer, Ask about the details on Teamspeak", 1500], 
 ["This server is monitored 24/7 by admins, all actions are logged", 1000], 
 ["This server restarts every 6 hours to ensure optimal client performance !", 3600]
 ];
