@@ -22,6 +22,8 @@ switch (_type) do {
 	case "base":	{_selectionArray = APOC_AA_SupOptions};
 	case "base1":	{_selectionArray = APOC_AA_SupOptions};
 	case "base2":	{_selectionArray = APOC_AA_SupOptions};
+	case "safe":	{_selectionArray = APOC_AA_SupOptions};
+	case "locker":	{_selectionArray = APOC_AA_SupOptions};
 	default 		{_selectionArray = APOC_AA_VehOptions; diag_log "AAA - Default Array Selected - Something broke";};
 };
 _selectionName =(_selectionArray select _selectionNumber) select 0;

@@ -632,9 +632,9 @@ allStoreGear = compileFinal str (call headArray + call uniformArray + call vestA
 
 genObjectsArray = compileFinal str
 [
-	//["Base Locker", "Land_Portable_generator_F", 100000, "object"],  //Cael817, SNAFU,Used for base operations <-- Non destroyable
-	["Base Locker", "Land_Device_assembled_F", 50000, "object"],  //Cael817, SNAFU,Used for base operations <-- Destroyable
-	["Safe (PIN IS EMPTY) !BETA VERSION!", "Box_NATO_AmmoVeh_F", 100000, "ammocrate"],
+	["Base Locker", "Land_Portable_generator_F", 100000, "object"],  //Cael817, SNAFU,Used for base operations <-- Non destroyable
+//	["Base Locker", "Land_Device_assembled_F", 50000, "object"],  //Cael817, SNAFU,Used for base operations <-- Destroyable
+	["Safe (PIN IS EMPTY, JUST PRESS ENTER) ", "Box_NATO_AmmoVeh_F", 100000, "ammocrate"],
 	["Camp Fire", "Land_FirePlace_F", 100, "object"],
 	["Small Platform", "Land_GH_Platform_F", 500, "object"],
 //	["Basketball Court", "Land_BC_Court_F", 1000, "object"],

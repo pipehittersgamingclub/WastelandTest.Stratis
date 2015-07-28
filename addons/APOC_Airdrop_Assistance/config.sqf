@@ -21,6 +21,8 @@ APOC_AA_VehOptions =
 
 APOC_AA_SupOptions =
 [
+	["Inventory & Money Safe", "Box_NATO_AmmoVeh_F",110000,"safe"],
+	["Base Parts Locker", "Land_Portable_generator_F",110000,"locker"],
 	["Base in a Box (Small)","Land_CargoBox_V1_F",75000,"base"],
 	["Base in a Box (Medium)","Land_Cargo20_yellow_F",125000,"base1"],
 	["Base in a Box (Large)","Land_Cargo40_white_F",175000,"base2"],

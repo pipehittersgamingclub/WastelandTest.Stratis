@@ -22,6 +22,8 @@ switch (_type) do {
 	case "base":	{_selectionArray = APOC_AA_SupOptions};
 	case "base1":	{_selectionArray = APOC_AA_SupOptions};
 	case "base2":	{_selectionArray = APOC_AA_SupOptions};
+	case "safe":	{_selectionArray = APOC_AA_SupOptions};
+	case "locker":	{_selectionArray = APOC_AA_SupOptions};	
 	default 		{_selectionArray = APOC_AA_VehOptions; diag_log "AAA - Default Array Selected - Something broke";};
 };
 
@@ -155,6 +157,25 @@ _object = switch (_type) do {
 		clearWeaponCargoGlobal _object;
 		clearItemCargoGlobal _object;
 		[_object, [["Land_Cargo_Tower_V1_F",2],["Land_GH_Platform_F",10],["Land_Canal_Wall_Stairs_F", 10],["Land_BarGate_F", 4],["Land_Cargo_Patrol_V1_F", 4],["Land_HBarrierWall6_F", 10],["Land_Canal_WallSmall_10m_F", 20],["Land_LampHalogen_F", 10], ["Land_RampConcreteHigh_F",4], ["Land_RampConcrete_F", 4],["Land_Crash_barrier_F",6],["B_GMG_01_F",2],["B_static_AA_F",2],["B_static_AT_F",2],["B_Quadbike_01_F",4],["C_Heli_light_01_digital_F",1]] ] execVM "addons\R3F_LOG\auto_load_in_vehicle.sqf";
+		_object
+	};
+		case "safe":
+	{
+		_objectSpawnPos = [(_spos select 0), (_spos select 1), (_spos select 2) - 5];
+		_object = createVehicle ["Box_NATO_AmmoVeh_F", _objectSpawnPos, [], 0, "None"];
+		_object AllowDamage false;
+		//diag_log format ["Apoc's Airdrop Assistance - Object Spawned at %1", position _object];
+		_object setVariable ["A3W_purchasedStoreObject", true];
+		_object attachTo [_heli, [0,0,-5]]; //Attach Object to the heli
+		_object
+	};
+		case "locker":
+	{
+		_objectSpawnPos = [(_spos select 0), (_spos select 1), (_spos select 2) - 5];
+		_object = createVehicle ["Land_Portable_generator_F", _objectSpawnPos, [], 0, "None"];
+		diag_log format ["Apoc's Airdrop Assistance - Object Spawned at %1", position _object];
+		_object setVariable ["A3W_purchasedStoreObject", true];
+		_object attachTo [_heli, [0,0,-5]]; //Attach Object to the heli
 		_object
 	};
 	default {
