@@ -60,6 +60,7 @@ pictureMap = "mapConfig\Loading.jpg";
 #include "client\systems\hud\dialog\downloadData.hpp"
 #include "addons\TOParmaInfo\dialog\TOParmaInfo_dialog.hpp"
 #include "addons\BoS\dialog\BoS_mainMenu.hpp"
+#include "addons\Safe\dialog\Safe_mainMenu.hpp"
 #include "addons\AF_Keypad\AF_KP_defines.hpp"
 #include "addons\AF_Keypad\AF_KP_dialogs.hpp"
 

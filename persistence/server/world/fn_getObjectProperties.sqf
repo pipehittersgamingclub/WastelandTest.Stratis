@@ -68,20 +68,59 @@ if (!isNil "_r3fSide") then
 	_variables pushBack ["R3F_Side", str _r3fSide];
 };
 
-// BASE LOCKING
-_lockDown = _obj getVariable "lockDown";
-
-if (!isNil "_lockDown") then
+/ BASE - SAFE LOCKING Start
+switch (true) do
 {
-   _variables pushBack ["lockDown", _lockDown];
-};
+	case ( _obj isKindOf "Land_Device_assembled_F"):
+	{
+		_lockDown = _obj getVariable "lockDown";
 
-_password = _obj getVariable "password";
-if (!isNil "_password") then 
-{
-   _variables pushBack ["password", _password];
+		if (!isNil "_lockDown") then
+		{
+		   _variables pushBack ["lockDown", _lockDown];
+		};
+
+		_password = _obj getVariable "password";
+
+		if (!isNil "_password") then 
+		{
+		   _variables pushBack ["password", _password];
+		};
+	};
+	case ( _obj isKindOf "Box_NATO_AmmoVeh_F"):
+	{
+		_password = _obj getVariable "password";
+
+		if (!isNil "_password") then 
+		{
+		   _variables pushBack ["password", _password];
+		};
+
+		_lockedSafe = _obj getVariable "lockedSafe";
+
+		if (!isNil "_lockedSafe") then 
+		{
+		   _variables pushBack ["lockedSafe", _lockedSafe];
+		};
+
+		_inventoryLock = _obj getVariable "A3W_inventoryLockR3F";
+
+		if (!isNil "_inventoryLock") then 
+		{
+		   _variables pushBack ["A3W_inventoryLockR3F", _inventoryLock];
+		};
+
+		_R3FLog = _obj getVariable "R3F_LOG_disabled";
+
+		if (!isNil "_R3FLog") then 
+		{
+		   _variables pushBack ["R3F_LOG_disabled", _R3FLog];
+		};
+	};
 };
-//BASE LOCKING, End
+//BASE - SAFE LOCKING End
+
+  
 
 _weapons = [];
 _magazines = [];
